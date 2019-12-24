@@ -50,6 +50,9 @@ class App extends Component {
       case 39:
         this.setState({ direction: "RIGHT" });
         break;
+      default:
+        this.setState({ direction: this.direction });
+        break;
     }
   };
 
@@ -70,6 +73,9 @@ class App extends Component {
         break;
       case "UP":
         head = [head[0], head[1] - 2];
+        break;
+      default:
+        this.setState({ direction: this.direction });
         break;
     }
     // input the head in the dots array
